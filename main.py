@@ -21,8 +21,8 @@ class wifiDeviceAnalyzer:
         pw = data['password']
 
         opts = Options()
-        # opts.set_headless()
-        # assert opts.set_headless
+        opts.add_argument("--headless")
+        opts.add_argument("window-size=1920,1080") 
         driver = webdriver.Firefox(options = opts)
         driver.get('http://' + url)
         time.sleep(2)
